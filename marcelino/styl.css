@@ -1,0 +1,271 @@
+html, body {
+    background-color: rgb(0, 0, 0);
+    margin: 0em 0em 0em 0em;
+    padding: 0em;
+    font-family: Lato;
+    scroll-behavior: smooth;
+}
+
+#company_information {
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#comp_name {
+    font-size: 7vh;
+}
+#inf {
+    font-size: 4vh;
+    margin-top: 5vh;
+}
+.header-info {
+    color: white;
+    font-weight: bolder;
+    text-align: center;
+    font-family: 'Quando',serif;
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+/* Navbar - menu z nawigacją */
+.navbar {
+    z-index: 999;
+    height: 5em; /* Zmniejsz wysokość paska nawigacyjnego */
+    background-color: rgba(244, 241, 236); /* Ustaw kolor paska nawigacyjnego */
+    transition: background-color 0.3s ease; /* Dodaj płynne przejście koloru */
+}
+
+.navbar-custom {
+    background-color: transparent; /* Ustaw przezroczysty kolor */
+}
+
+.navbar-custom-scroll {
+    background-color: rgba(244, 241, 236, 0.9);
+}
+
+/* Navbar - zmień kolor tła po przewinięciu strony */
+.navbar-scrolled {
+    background-color: rgba(0, 0, 0, 0.7) !important; /* Kolor po przewinięciu */
+}
+/* nawigacja (a) */
+.navigation-link-top{
+    font-size: 20px;
+    padding: 0px 20px 0px 20px;
+    color: black;
+    text-decoration: none;
+}
+.navigation-link-scroll{
+    font-size: 20px;
+    padding: 0px 20px 0px 20px;
+    color: black;
+    text-decoration: none;
+}
+.custom-toggler.navbar-toggler {
+    border-color: rgb(55, 195, 195);
+}
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(55, 195, 195)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+.anchor { 
+    padding-top: 80px; 
+}
+
+/* Logo - zmień rozmiar */
+#menu-logo {
+    width: 50%; /* Zmniejsz lub zwiększ rozmiar logo według potrzeb */
+}
+
+/* Tło dla wszystkich sekcji strony */
+#content {
+    background-color: rgba(244, 241, 236); /* Kolor tła */
+    padding: 20px; /* Odstęp wewnętrzny */
+}
+
+.information-nasze-wino-anchor,.information-o-nas-anchor,.information-kontakt-anchor{
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    font-size: 2rem;
+}
+
+.information-o-nas-anchor:hover,.information-kontakt-anchor:hover{
+    color:black;
+    text-decoration:none;
+    font-weight:bold;
+    font-size: 2rem;
+}
+
+
+/* dział nasze wino */
+
+#shop-content {
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Teraz elementy będą przejść do nowej linii, gdy brakuje miejsca */
+    justify-content: space-between;
+    margin-top: 1em;
+}
+
+.image {
+    position: relative;
+    flex: 0 0 calc(33.33% - 10px); /* 33.33% szerokości ekranu z odstępem */
+    margin: 0 5px;
+    text-align: center;
+    overflow: hidden; /* Zapobiega przekraczaniu obrazków */
+}
+
+.image img {
+    width: 100%;
+    height: auto; /* Automatycznie dostosowuje wysokość */
+    transition: transform 0.3s ease; /* Dodaj płynną animację dla efektu powiększenia */
+}
+
+.image:hover img {
+    transform: scale(1.1); /* Powiększ obrazek o 10% po najechaniu myszką */
+}
+
+
+.image h4 {
+    position: relative;
+    z-index: 1;
+    color: #000;
+    font-size: 14px; /* Zmniejsz rozmiar tytułu */
+    padding: 10px;
+}
+
+.image p {
+    position: relative;
+    z-index: 1;
+    color: #000;
+    font-size: 14px; /* Zmniejsz rozmiar tekstu */
+    padding: 10px;
+    text-align: justify; /* Wyjustuj tekst */
+}
+
+@media all and (max-width: 768px) {
+    .image {
+        flex: 0 0 100%; /* Każdy element będzie zajmował 100% szerokości, więc będzie wyświetlany pod sobą */
+        margin-bottom: 10px; /* Dodaj odstęp między elementami */
+    }
+    
+    .image:nth-child(n+2) {
+        margin-top: 10px; /* Dodaj odstęp między rzędami, począwszy od drugiego elementu */
+    }
+}
+
+
+
+/* Zawartość działu 'bag in box' */
+.bag-in-box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    margin-top: 4em; /* Dodaj odstęp na górze */
+    
+}
+
+.bag-in-box-title {
+    font-size: 2rem; /* Rozmiar tytułu */
+    margin-bottom: 1em; /* Odstęp między tytułem a resztą zawartości */
+    margin-top: 2em;
+}
+
+.bag-in-box-container {
+    display: flex;
+    justify-content: center; /* Wyśrodkuj zawartość poziomo */
+    align-items: flex-start; /* Wyrównaj zawartość pionowo do góry */
+    width: 100%; /* Ustaw szerokość kontenera na 100% */
+}
+
+.bag-in-box-writing {
+    width: 50%; /* Szerokość tekstu */
+    font-size: 20px;
+    margin-right: 20px; /* Dodaj odstęp między tekstem a obrazkiem */
+    align-self:center;
+    padding-left: 4em; /* Dodaj odstęp z lewej strony */
+}
+
+.bag-in-box-image img {
+    max-width: 100%; /* Maksymalna szerokość obrazka */
+    height: auto; /* Automatyczna wysokość */
+}
+@media all and (max-width: 768px) {
+    .bag-in-box-container {
+        flex-direction: column; /* Ustawienie elementów w kolumnie na mniejszych ekranach */
+        align-items: center; /* Wyśrodkowanie elementów poziomo */
+    }
+
+    .bag-in-box-writing {
+        width: 100%; /* Szerokość tekstu na całej szerokości kontenera */
+        margin-right: 0; /* Usunięcie marginesu między tekstem a obrazkiem */
+        padding-left: 0; /* Usunięcie odstępu z lewej strony */
+        text-align: center; /* Wyśrodkowanie tekstu poziomo */
+    }
+
+    .bag-in-box-image {
+        align-self: center;
+        width: 100%; /* Szerokość obrazka na całej szerokości kontenera */
+        margin-top: 1em; /* Dodanie odstępu między tekstem a obrazkiem */
+    }
+}
+
+#o-nas-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    margin-top: 4em; /* Dodaj odstęp na górze */
+}
+
+.o-nas-writing {
+    width: 50%; /* Szerokość tekstu */
+    font-size: 20px;
+    margin-right: 20px; /* Dodaj odstęp między tekstem a obrazkiem */
+    align-self:center;
+    padding-left: 4em; /* Dodaj odstęp z lewej strony */
+}
+
+.o-nas-image img {
+    max-width: 100%; /* Maksymalna szerokość obrazka */
+    height: auto; /* Automatyczna wysokość */
+}
+
+
+#wyjatkowe-wino{
+    text-align: center;
+}
+
+.wyjatkowe-wino-title{
+    font-size: 2rem;
+    margin-bottom: 1em;
+    margin-top: 2em;
+}
+
+.wyjatkowe-wino-content{
+    font-size: 20px;
+}
+
+#next-to-elements{
+    padding-top: 4em;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#contact-info ul li {
+    margin-bottom: 1em; 
+}
+
+
+#footer{
+    text-align: center;
+}
